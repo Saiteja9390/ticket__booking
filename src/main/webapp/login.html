@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login</title>
+    <style>
+        body { font-family: Arial; background: #eee; }
+        .box {
+            width: 330px; background: white; padding: 20px;
+            margin: auto; margin-top: 60px; border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.2);
+        }
+        input {
+            width: 100%; padding: 10px; margin-top: 10px;
+            border-radius: 5px; border: 1px solid gray;
+        }
+
+        /* LOGIN BUTTON FIX */
+        .login-btn {
+            width: 100%;
+            padding: 12px;
+            margin-top: 20px;
+            background: #673AB7;
+            color: white;
+            border: none;
+            font-size: 18px;
+            cursor: pointer;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+        .login-btn:hover {
+            background: #5a2fa0;
+        }
+
+        a { text-decoration: none; color: #673AB7; }
+    </style>
+</head>
+<body>
+
+    <div class="box">
+        <h2>Login</h2>
+
+        <form action="login" method="post">
+            <input type="text" name="email" placeholder="Email or Mobile" required>
+            <input type="password" name="password" placeholder="Password" required>
+
+            <!-- VISIBLE LOGIN BUTTON -->
+            <button type="submit" class="login-btn">Login</button>
+        </form>
+
+        <p>Don’t have an account? <a href="register.html">Register</a></p>
+    </div>
+
+    <!-- ERROR MESSAGE -->
+    <p style="color:red; font-weight:bold; text-align:center;">
+        <script>
+            const params = new URLSearchParams(window.location.search);
+            if (params.get("error") == "1") {
+                document.write("Invalid email or password!");
+            }
+        </script>
+    </p>
+
+</body>
+</html>

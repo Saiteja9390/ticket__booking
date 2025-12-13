@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Temple Darshan Portal</title>
+    <style>
+        body {
+            font-family: Arial;
+            background: #f6f6f6;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Navbar */
+        .navbar {
+            background: #673AB7;
+            padding: 15px;
+            color: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .navbar h2 {
+            margin: 0;
+        }
+
+        .nav-buttons button {
+            background: white;
+            color: #673AB7;
+            padding: 8px 14px;
+            margin-left: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        /* Main Content */
+        .container {
+            width: 85%;
+            margin: auto;
+            margin-top: 20px;
+        }
+
+        .temple-img {
+            width: 100%;
+            height: 320px;
+            border-radius: 10px;
+            object-fit: cover;
+        }
+
+        .info-box {
+            background: white;
+            margin-top: 20px;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 5px rgba(0,0,0,0.2);
+        }
+
+        .book-btn {
+            background: #FF5722;
+            color: white;
+            padding: 15px;
+            border: none;
+            width: 100%;
+            font-size: 18px;
+            border-radius: 8px;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- NAVBAR -->
+    <div class="navbar">
+        <h2>Temple Darshan Portal</h2>
+        <div class="nav-buttons">
+            <button onclick="window.location.href='login.html'">Login</button>
+            <button onclick="window.location.href='logout.html'">Logout</button>
+            <button onclick="window.location.href='adminInterface.jsp'">admin login</button>
+        </div>
+    </div>
+
+    <!-- MAIN CONTENT AREA -->
+    <div class="container">
+
+        <img src="temple.jpg" class="temple-img" alt="Temple Image">
+
+        <div class="info-box">
+            <h2>Temple Information</h2>
+            <p>
+                Welcome to the official Temple Darshan Portal.  
+                Book your tickets online and avoid long queues.  
+                This temple is famous for its historical architecture and spiritual significance.
+            </p>
+
+            <h3>Darshan Timings:</h3>
+            <ul>
+                <li>Morning: 6:00 AM – 12:00 PM</li>
+                <li>Evening: 4:00 PM – 9:00 PM</li>
+            </ul>
+        </div>
+
+       
+    </div>
+
+</body>
+</html>
